@@ -178,6 +178,10 @@ function action (Request $request)
     }
       function user()
     {
-        return view('admin/user');
+        
+    $data = array(
+        'list' => DB::table('users')->get()
+    );
+        return view('admin/user',$data);
     }
 }

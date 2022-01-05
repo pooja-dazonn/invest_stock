@@ -44,10 +44,17 @@
                       </tr>
                     </thead>
                     <tbody>
-               
-                     <tr>
+                    @foreach($list as $row)
+                      <tr>
+                        <td>{{$row->id}}</td>
+                        <td>{{$row->name}}</td>
+                        <td>{{$row->email}}</td>
+                        <td>{{$row->password}}</td>
+                        
                        
+
                       </tr>
+                      @endforeach
                  
                     </tbody>
                   </table>
